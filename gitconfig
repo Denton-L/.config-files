@@ -5,6 +5,8 @@
 	please = push --force-with-lease
 	ref = show -s --pretty=reference
 	reword = commit --amend
+[checkout]
+	guess = false
 [commit]
 	cleanup = scissors
 [core]
