@@ -147,9 +147,6 @@ let g:airline#extensions#whitespace#mixed_indent_algo = 1
 "change vimtex leader key
 let g:vimtex_imaps_leader = '~'
 
-"ignore vimtex warnings
-let g:vimtex_quickfix_latexlog = {'default' : 0}
-
 "make vim-localvimrc make loaded files persistent
 let g:localvimrc_persistent = 1
 
