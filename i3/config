@@ -229,6 +229,12 @@ bindsym Control+Print exec "$scrot-clip -e"
 bindsym XF86Display exec arandr
 bindsym Mod4+p exec arandr
 
+# dunst controls
+bindsym $mod+space exec dunstctl close
+bindsym $mod+Shift+space exec dunstctl close-all
+bindsym $mod+grave exec dunstctl history-pop
+bindsym $mod+Shift+period exec dunstctl context
+
 # Program keybindings
 mode "launch" {
 	bindsym c exec chromium; mode "default"
