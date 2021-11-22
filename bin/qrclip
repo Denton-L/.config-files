@@ -1,0 +1,3 @@
+#!/bin/sh
+
+xclip -sel clip -out | qrencode -r /dev/stdin -o - | display
