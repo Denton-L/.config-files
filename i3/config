@@ -225,7 +225,7 @@ bindsym --release Print exec "$scrot-clip -s"
 bindsym Shift+Print exec "$scrot-clip -u -b"
 bindsym Control+Print exec "$scrot-clip -e"
 
-# arander Launch commands
+# arandr Launch commands
 bindsym XF86Display exec arandr
 bindsym Mod4+p exec arandr
 
