@@ -1,0 +1,3 @@
+#!/bin/sh
+
+MERGEPROG='git merge-file -p --diff3' pacdiff -s
