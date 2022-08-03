@@ -27,7 +27,7 @@
 [mergetool]
 	prompt = false
 [merge]
-	conflictStyle = diff3
+	conflictStyle = zdiff3
 	guitool = meld
 	tool = vimdiff3
 [pull]
