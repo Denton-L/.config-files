@@ -162,18 +162,18 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 mode "media" {
-	bindsym grave exec amixer -q set Master 0% unmute; mode "default"
-	bindsym 1 exec amixer -q set Master 10% unmute; mode "default"
-	bindsym 2 exec amixer -q set Master 20% unmute; mode "default"
-	bindsym 3 exec amixer -q set Master 30% unmute; mode "default"
-	bindsym 4 exec amixer -q set Master 40% unmute; mode "default"
-	bindsym 5 exec amixer -q set Master 50% unmute; mode "default"
-	bindsym 6 exec amixer -q set Master 60% unmute; mode "default"
-	bindsym 7 exec amixer -q set Master 70% unmute; mode "default"
-	bindsym 8 exec amixer -q set Master 80% unmute; mode "default"
-	bindsym 9 exec amixer -q set Master 90% unmute; mode "default"
-	bindsym 0 exec amixer -q set Master 100% unmute; mode "default"
-	bindsym minus exec amixer -q set Master 100% mute; mode "default"
+	bindsym grave exec amixer -q -D pulse set Master 0% unmute; mode "default"
+	bindsym 1 exec amixer -q -D pulse set Master 10% unmute; mode "default"
+	bindsym 2 exec amixer -q -D pulse set Master 20% unmute; mode "default"
+	bindsym 3 exec amixer -q -D pulse set Master 30% unmute; mode "default"
+	bindsym 4 exec amixer -q -D pulse set Master 40% unmute; mode "default"
+	bindsym 5 exec amixer -q -D pulse set Master 50% unmute; mode "default"
+	bindsym 6 exec amixer -q -D pulse set Master 60% unmute; mode "default"
+	bindsym 7 exec amixer -q -D pulse set Master 70% unmute; mode "default"
+	bindsym 8 exec amixer -q -D pulse set Master 80% unmute; mode "default"
+	bindsym 9 exec amixer -q -D pulse set Master 90% unmute; mode "default"
+	bindsym 0 exec amixer -q -D pulse set Master 100% unmute; mode "default"
+	bindsym minus exec amixer -q -D pulse set Master 100% mute; mode "default"
 
 	bindsym Down exec playerctl play-pause; mode "default"
 	bindsym Up exec playerctl stop; mode "default"
@@ -202,10 +202,10 @@ bar {
 }
 
 # Keybindings to control volume
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 2%+ unmute
-bindsym XF86AudioLowerVolume exec amixer -q set Master 2%- unmute
-bindsym XF86AudioMute exec amixer -q set Master toggle
-bindsym XF86AudioMicMute exec amixer -q set Capture toggle
+bindsym XF86AudioRaiseVolume exec amixer -q -D pulse set Master 2%+ unmute
+bindsym XF86AudioLowerVolume exec amixer -q -D pulse set Master 2%- unmute
+bindsym XF86AudioMute exec amixer -q -D pulse set Master toggle
+bindsym XF86AudioMicMute exec amixer -q -D pulse set Capture toggle
 
 # Media keybindings
 bindsym XF86AudioPlay exec playerctl play-pause
