@@ -9,7 +9,7 @@ else
 	CONFIG_ROOT="$SSHHOME"
 fi
 
-shopt -s checkwinsize checkjobs extglob
+shopt -s checkwinsize checkjobs extglob globstar
 
 [[ -d "$CONFIG_ROOT"/.config-files/bashrc_sources/ ]] && for f in "$CONFIG_ROOT"/.config-files/bashrc_sources/*
 do
