@@ -22,6 +22,6 @@ xautolock -detectsleep -time 1 -locker "$cmd" &
 	sleep 1
 	xautolock -locknow
 } &
-trap 'xautolock -exit' EXIT
+trap 'while xautolock -exit; do sleep 1; done' EXIT
 trap 'exit 1' INT
 i3lock -nfc FF7700
