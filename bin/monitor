@@ -1,4 +1,0 @@
-#!/bin/sh
-
-~/.screenlayout/"$1".sh || exit 1
-change-background
