@@ -1,7 +1,13 @@
 #!/bin/sh
 
+old=
 while true
 do
-	xmodmap ~/.Xmodmap
-	watch -g -n 1 xinput >/dev/null
+	new="$(xinput)"
+	if test "$new" != "$old"
+	then
+		xmodmap ~/.Xmodmap
+		old="$new"
+	fi
+	sleep 1
 done
