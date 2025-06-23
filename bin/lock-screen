@@ -17,11 +17,17 @@ do
 	shift
 done
 
-xautolock -detectsleep -time 1 -locker "$cmd" &
+old_timeout="$(xset q | sed -ne 's/^ *timeout: *\([0-9]*\).*$/\1/p')"
+xset s 60
+
+xss-lock -- $cmd &
+pid="$!"
+
+trap 'kill "$pid"; xset s "$old_timeout"' EXIT
+trap 'exit 1' INT
+
 {
 	sleep 1
-	xautolock -locknow
+	$cmd
 } &
-trap 'while xautolock -exit; do sleep 1; done' EXIT
-trap 'exit 1' INT
 i3lock -nfc FF7700
