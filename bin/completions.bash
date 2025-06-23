@@ -112,8 +112,6 @@ completions() {
 	} &&
 	complete -F _git_git git-git "git git"
 
-	complete -F _ssh chromium-socks
-
 	command -v _command && complete -F _command run
 }
 

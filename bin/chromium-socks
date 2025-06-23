@@ -1,9 +1,0 @@
-#!/bin/sh
-
-SOCKET_LOCATION="/tmp/socks.%C"
-
-ssh -fCND 1080 -MS "$SOCKET_LOCATION" "$@"
-tempdir=$(mktemp -d)
-chromium --proxy-server="socks5://localhost:1080" --host-resolver-rules="MAP * 0.0.0.0, EXCLUDE localhost" --user-data-dir="$tempdir"
-ssh -S "$SOCKET_LOCATION" -O exit
-rm -rf "$tempdir"
