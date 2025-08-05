@@ -245,6 +245,7 @@ mode "launch" {
 	bindsym h exec lock-screen --hibernate; mode "default"
 	bindsym f exec pcmanfm; mode "default"
 	bindsym t exec transmission-gtk; mode "default"
+	bindsym p exec autorandr --force --change; mode "default"
 
 	bindsym Return mode "default"
 	bindsym Escape mode "default"
